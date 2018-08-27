@@ -5,7 +5,7 @@ import struct
 from statistics import mean
 
 HOST = '158.37.74.84'  # raspi IP.   VIKTIG! HVIS DENNE ENDRER SEG PÅ RASPI MÅ DENNE ENDRES TIL RIKTIG IP
-PORT = 12346  # port til å motta Lidardata
+PORT = 12346  # port til å motta Lidardata Test
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
