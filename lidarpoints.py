@@ -3,11 +3,7 @@ import random
 from statistics import mean
 
 
-"""
-Module for storing points received and handling operations
-
-
-"""
+#Module for storing points received and handling operations
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     filename='robot.log',
@@ -15,18 +11,17 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
 logging.debug('Loading module robot')
 
 class Point(object):
-""" Class for one lidar point - next version should have pitch too
-"""
+#Class for one lidar point - next version should have pitch too"""
     def __init__(self,dist,angle):
         self.dist = dist
         self.angle = angle
 
 
 class LidarPoints(object):
-    """ class for the storage and operations """
+    #class for the storage and operations """
 
     def __init__(self,size):
-        """ Storing arrays """
+        #Storing arrays """
         self.maxsize = size
 
         self.leftdist = []
@@ -74,10 +69,10 @@ class LidarPoints(object):
         self.backdist.append(point.dist)
 
     def storenew(self,point):
-        """ stores a new point in one of three directions - front, left, back and right
+        #stores a new point in one of three directions - front, left, back and right
 
-            methods to get status of the directions
-        """
+        #    methods to get status of the directions
+        
 
         # check out right
         if point.angle >= 70 and point.angle < 110:

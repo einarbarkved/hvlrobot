@@ -73,7 +73,7 @@ class Directionlists(object):
                             self.alisteH.append(lengde)  # og adder den nye verdien i begge listene
                             self.vlisteH.append(vinkel)
                             self.h = max(self.alisteH)  # sørste målte lengde til høyre for bilen
-                            self.storsteposH = self.alisteH.index(h)  # posisjonen til sørste målte lengde til høyre for bilen
+                            self.storsteposH = self.alisteH.index(self.h)  # posisjonen til sørste målte lengde til høyre for bilen
 
                         if (vinkel > 0 and vinkel < 10) or (vinkel < 360 and vinkel > 350):  # vinkler foran bilen
 
@@ -160,7 +160,7 @@ class Vehicle(object):
         logging.info('Vehicle operational')
 
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.sock.connect((self.ipaddress, self.lidarport))
+        self.sock.connect((self.ipaddress, self.vehicleport))
 
         return
 
